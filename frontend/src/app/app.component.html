@@ -1,0 +1,16 @@
+<div class="container mx-auto px-6">
+  <nav class="flex items-center justify-between py-4">
+    <div class="text-2xl font-bold text-gray-800">
+      Community Posts
+    </div>
+    <div>
+      <a routerLink="/" class="px-4 font-semibold text-gray-700">Home</a>
+      <a routerLink="/new-post" class="px-4 font-semibold text-gray-700">New Post</a>
+    </div>
+  </nav>
+
+  <!-- Here's where we include the router outlet -->
+  <div class="content mt-6">
+    <router-outlet></router-outlet>
+  </div>
+</div>
