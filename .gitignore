@@ -20,6 +20,7 @@ tmp/
 # Ignore Angular and Ruby on Rails project-specific files
 frontend/node_modules/
 frontend/dist/
+frontend/.angular/cache/
 server/node_modules/
 server/tmp/
 server/log/
