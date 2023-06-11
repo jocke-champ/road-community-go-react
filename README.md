@@ -14,7 +14,7 @@ Följ dessa steg för att installera och köra applikationen lokalt:
 
 1. Klona detta Git-repositorium till din lokala maskin:
   ```shell
-  git clone https://github.com/<ditt användarnamn>/<ditt repo>.git
+  git clone https://github.com/jocke-champ/road-community-ruby-angular.git
   ```
 2. Gå till projektets rotmapp:
   ```shell
