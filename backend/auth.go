@@ -14,6 +14,10 @@ var (
 
 func GetCurrentUser(c *gin.Context) {
 	session, _ := store.Get(c.Request, "session-name")
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "something went wrong"})
+	}
+
 	userID, ok := session.Values["user_id"].(uint)
 	if !ok {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
@@ -29,6 +33,10 @@ func Login(c *gin.Context) {
 	// TODO Authenticate user
 
 	session, _ := store.Get(c.Request, "session-name")
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "something went wrong"})
+	}
+
 	session.Values["user_id"] = user.ID // replace user.ID with the authenticated user's ID
 	session.Save(c.Request, c.Writer)
 
@@ -37,6 +45,10 @@ func Login(c *gin.Context) {
 
 func Logout(c *gin.Context) {
 	session, _ := store.Get(c.Request, "session-name")
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "something went wrong"})
+	}
+
 	delete(session.Values, "user_id")
 	session.Save(c.Request, c.Writer)
 

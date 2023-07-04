@@ -4,7 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-//Add surname+lastname in User as Name
 type User struct {
 	gorm.Model
 	Email        string     `gorm:"type:varchar(100);unique_index" json:"email"`
