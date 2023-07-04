@@ -1,7 +1,7 @@
 package handlers 
 
 import (
-	"backebd/modals"
+	"backend/modals"
 	"net/http"
 
 	"github.com/gin-gonit/git

@@ -14,7 +14,7 @@ var (
 
 func GetCurrentUser(c *gin.Context) {
 	session, _ := store.Get(c.Request, "session-name")
-	userID, ok := session.Values["user_id"].(unit)
+	userID, ok := session.Values["user_id"].(uint)
 	if !ok {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
 		return
